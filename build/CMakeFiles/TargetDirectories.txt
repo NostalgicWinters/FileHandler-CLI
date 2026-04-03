@@ -1,3 +1,0 @@
-/home/dev/workdir/Athena/build/CMakeFiles/cross_platform_tool.dir
-/home/dev/workdir/Athena/build/CMakeFiles/edit_cache.dir
-/home/dev/workdir/Athena/build/CMakeFiles/rebuild_cache.dir
