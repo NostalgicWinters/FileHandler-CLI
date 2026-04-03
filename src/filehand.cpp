@@ -1,3 +1,4 @@
+#include <cstdio>
 #include <filesystem>
 #include <fstream>
 #include <iostream>
@@ -20,7 +21,17 @@ void wrking_dir()
     cout << filesystem::current_path();
 }
 
+void rename(filesystem::path file_path, filesystem::path new_filepath)
+{
+    filesystem::rename(file_path, new_filepath);
+}
+
+void is_there(filesystem::path p)
+{
+    cout << filesystem::exists(p);
+}
+
 int main(int argc, char* argv[])
 {   
-    wrking_dir();
+    is_there("textFolder");
 }
