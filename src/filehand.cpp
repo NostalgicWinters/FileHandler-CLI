@@ -18,7 +18,7 @@ void mkfile(const string& file_name)
 
 void wrking_dir()
 {
-    cout << filesystem::current_path();
+    cout << filesystem::current_path() << "\n";
 }
 
 void rename(filesystem::path file_path, filesystem::path new_filepath)
@@ -28,10 +28,25 @@ void rename(filesystem::path file_path, filesystem::path new_filepath)
 
 void is_there(filesystem::path p)
 {
-    cout << filesystem::exists(p);
+    cout << filesystem::exists(p) << "\n";
+}
+
+void del_file(filesystem::path p)
+{
+    filesystem::remove(p);
+}
+
+void del_repo(filesystem::path p)
+{
+    filesystem::remove_all(p);
+}
+
+void weight(filesystem::path p)
+{
+    cout << filesystem::file_size(p) << " bytes\n";
 }
 
 int main(int argc, char* argv[])
 {   
-    is_there("textFolder");
+    weight("src/main.cpp");
 }
