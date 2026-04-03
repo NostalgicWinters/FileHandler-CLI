@@ -1,17 +1,26 @@
-#include <iostream>
-#include <fstream>
-#include <format>
 #include <filesystem>
+#include <fstream>
+#include <iostream>
 
 using namespace std;
 
-void createAFolder(const string& folder_name)
+
+void mkrepo(const string& folder_name)
 {
     filesystem::create_directory(folder_name);
 }
 
-int main(int argc, char* argv[])
+void mkfile(const string& file_name)
 {
-    string name_of_folder = (argc > 1) ? argv[1] : "testfolder";
-    createAFolder(name_of_folder);
+    ofstream file(file_name, ios::out);
+}
+
+void wrking_dir()
+{
+    cout << filesystem::current_path();
+}
+
+int main(int argc, char* argv[])
+{   
+    wrking_dir();
 }
